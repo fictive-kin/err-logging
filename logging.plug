@@ -1,0 +1,9 @@
+[Core]
+Name = Logging
+Module = logging
+
+[Documentation]
+Description = Allow for dynamically changing the logging level
+
+[Python]
+Version = 2+
