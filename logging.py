@@ -14,6 +14,7 @@ class Logging(BotPlugin):
 
 
     def _set_levels(self, level):
+        level = level.upper()
         for logger in self._loggers.values():
             logger.setLevel(level)
 
