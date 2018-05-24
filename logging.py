@@ -14,7 +14,6 @@ class Logging(BotPlugin):
 
 
     def _set_levels(self, level):
-        level = level.upper()
         for logger in self._loggers.values():
             logger.setLevel(level)
 
@@ -75,6 +74,7 @@ class Logging(BotPlugin):
     def logging_set(self, message, args):
         """Set the logging level"""
         if len(args) > 0:
+            args = args.upper()
             self._set_levels(logging.getLevelName(args))
             return 'Set logging level to: {}'.format(args)
 
